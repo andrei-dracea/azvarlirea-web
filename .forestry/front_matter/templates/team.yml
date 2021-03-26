@@ -1,4 +1,24 @@
 ---
 label: Team
 hide_body: true
-fields: []
+fields:
+- name: name
+  type: text
+  config:
+    required: false
+  label: Name
+- name: city
+  type: text
+  config:
+    required: false
+  label: City
+- name: link
+  type: text
+  config:
+    required: false
+  label: Link
+- name: contact
+  type: text
+  config:
+    required: false
+  label: Contact
