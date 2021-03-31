@@ -24,4 +24,5 @@ fields:
     required: false
   label: Contact
 pages:
+- portfolio/teams/buff.md
 - portfolio/teams/tuf.md
