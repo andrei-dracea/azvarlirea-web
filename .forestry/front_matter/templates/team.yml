@@ -23,3 +23,5 @@ fields:
   config:
     required: false
   label: Contact
+pages:
+- portfolio/teams/tuf.md
