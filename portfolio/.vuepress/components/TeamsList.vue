@@ -3,14 +3,13 @@
     <br />
     <h3 class="title is-4">Echipe din România</h3>
 
-
     <div class="columns">
       <div class="team column" v-for="entity in entities" :key="entity.key">
         <p>
           <img :src="entity.frontmatter.logo" class="logo" alt="" />
         </p>
         <p>
-          <b>{{ entity.frontmatter.title }}</b>
+          <b>{{ entity.frontmatter.name }}</b>
         </p>
 
         <span>{{ entity.frontmatter.city }}</span>
@@ -24,12 +23,8 @@ export default {
   computed: {
     entities() {
       return this.$site.pages
-        .filter(
-          (x) => x.path.startsWith('/teams/') && !x.frontmatter.works_index
-        )
-        .sort(
-          (a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
-        )
+        .filter((x) => x.path.startsWith('/teams/'))
+        .sort((a, b) => (a.frontmatter.name < b.frontmatter.name ? -1 : 1))
     },
   },
 }
