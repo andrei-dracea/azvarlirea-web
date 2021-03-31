@@ -1,11 +1,11 @@
 <template>
   <div class="teams-list">
-    <div class="team">
+    <div class="team" v-for="entity in entities" :key="entity.title">
       <p>
-        <b>{{ post.frontmatter.title }}</b>
+        <b>{{ entity.frontmatter.title }}</b>
       </p>
 
-      <span v-if="post.frontmatter.city">{{ post.frontmatter.city }}</span>
+      <span>{{ entity.frontmatter.city }}</span>
     </div>
   </div>
 </template>
@@ -13,10 +13,10 @@
 <script>
 export default {
   computed: {
-    posts() {
+    teams() {
       return this.$site.pages
         .filter(
-          (x) => x.path.startsWith('/works/') && !x.frontmatter.works_index
+          (x) => x.path.startsWith('/teams/') && !x.frontmatter.works_index
         )
         .sort(
           (a, b) => new Date(b.frontmatter.date) - new Date(a.frontmatter.date)
