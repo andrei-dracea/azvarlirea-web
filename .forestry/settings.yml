@@ -16,13 +16,6 @@ sections:
   match: "**/*"
   templates:
   - works
-- type: directory
-  path: portfolio/journal
-  label: Journal
-  create: all
-  match: "**/[!index]*"
-  templates:
-  - journal
 - type: heading
   label: Data
 - type: document
