@@ -1,6 +1,6 @@
 ---
 works_index: true
-hero_text: "<strong>Azvârlirea — </strong>Ultimate Frisbee Timișoara"
+hero_text: "<strong>Azvârlirea<br></strong>Ultimate Frisbee Timișoara"
 title: Hero
 
 ---
