@@ -23,6 +23,11 @@ fields:
   config:
     required: false
   label: Contact
+- name: logo
+  type: file
+  config:
+    maxSize: 64
+  label: Logo
 pages:
 - portfolio/teams/arad.md
 - portfolio/teams/buff.md
