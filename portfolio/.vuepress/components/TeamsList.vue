@@ -1,11 +1,20 @@
 <template>
   <div class="teams-list">
-    <div class="team" v-for="entity in entities" :key="entity.title">
-      <p>
-        <b>{{ entity.frontmatter.title }}</b>
-      </p>
+    <br />
+    <h3 class="title is-4">Echipe din România</h3>
 
-      <span>{{ entity.frontmatter.city }}</span>
+
+    <div class="columns">
+      <div class="team column" v-for="entity in entities" :key="entity.key">
+        <p>
+          <img :src="entity.frontmatter.logo" class="logo" alt="" />
+        </p>
+        <p>
+          <b>{{ entity.frontmatter.title }}</b>
+        </p>
+
+        <span>{{ entity.frontmatter.city }}</span>
+      </div>
     </div>
   </div>
 </template>
@@ -13,7 +22,7 @@
 <script>
 export default {
   computed: {
-    teams() {
+    entities() {
       return this.$site.pages
         .filter(
           (x) => x.path.startsWith('/teams/') && !x.frontmatter.works_index
@@ -26,15 +35,10 @@ export default {
 }
 </script>
 
-<style scoped>
-.post {
-  position: relative;
-  width: 100%;
-  height: 70vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  margin-bottom: 5vw;
-  cursor: pointer;
+<style lang="scss">
+.logo {
+  width: 100px;
+  height: 100px;
+  border: 1px solid $purple;
 }
 </style>
