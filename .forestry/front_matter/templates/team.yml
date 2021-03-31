@@ -24,6 +24,7 @@ fields:
     required: false
   label: Contact
 pages:
+- portfolio/teams/arad.md
 - portfolio/teams/buff.md
 - portfolio/teams/nuf.md
 - portfolio/teams/soimii-patriei.md
